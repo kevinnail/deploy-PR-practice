@@ -16,19 +16,23 @@ const btn = document.getElementById('btn');
 const btn2 = document.getElementById('btn2');
 
 btn.addEventListener('click', () => {
-    if (check(yourName) === true) {
-        result.textContent = yourName.value;
-        displayName.classList.toggle('hide');
-        form1.classList.toggle('hide');
-        yourName.value = '';
-    } else {
-        alert('You must enter a name.');
-    }
+    // if (check(yourName) === true) {
+    result.textContent = yourName.value;
+    form1.classList.toggle('hide');
+    displayName.classList.toggle('hide');
+    displayName.classList.add('name-display-class');
+    yourName.value = '';
+    console.log(displayName.classList);
+    // } else {
+    // alert('You must enter a name.');
+    // }
 });
 
 btn2.addEventListener('click', () => {
-    displayName.classList.toggle('hide');
     form1.classList.toggle('hide');
+    displayName.classList.toggle('hide');
+    displayName.classList.remove('name-display-class');
+    console.log(displayName.classList);
 });
 
 function check(yourName) {
