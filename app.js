@@ -22,7 +22,7 @@ btn.addEventListener('click', () => {
     displayName.classList.toggle('hide');
     displayName.classList.add('name-display-class');
     yourName.value = '';
-    console.log(displayName.classList);
+    // console.log(displayName.classList);
     // } else {
     // alert('You must enter a name.');
     // }
@@ -32,13 +32,13 @@ btn2.addEventListener('click', () => {
     form1.classList.toggle('hide');
     displayName.classList.toggle('hide');
     displayName.classList.remove('name-display-class');
-    console.log(displayName.classList);
+    // console.log(displayName.classList);
 });
 
-function check(yourName) {
-    if (yourName.value === '') {
-        return false;
-    } else {
-        return true;
-    }
-}
+// function check(yourName) {
+//     if (yourName.value === '') {
+//         return false;
+//     } else {
+//         return true;
+//     }
+// }
