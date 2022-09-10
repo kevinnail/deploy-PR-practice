@@ -16,16 +16,15 @@ const btn = document.getElementById('btn');
 const btn2 = document.getElementById('btn2');
 
 btn.addEventListener('click', () => {
-    // if (check(yourName) === true) {
-    result.textContent = yourName.value;
-    form1.classList.toggle('hide');
-    displayName.classList.toggle('hide');
-    displayName.classList.add('name-display-class');
-    yourName.value = '';
-    // console.log(displayName.classList);
-    // } else {
-    // alert('You must enter a name.');
-    // }
+    if (check(yourName) === true) {
+        result.textContent = yourName.value;
+        form1.classList.toggle('hide');
+        displayName.classList.toggle('hide');
+        displayName.classList.add('name-display-class');
+        yourName.value = '';
+    } else {
+        alert('You must enter a name.');
+    }
 });
 
 btn2.addEventListener('click', () => {
@@ -35,10 +34,31 @@ btn2.addEventListener('click', () => {
     // console.log(displayName.classList);
 });
 
-// function check(yourName) {
-//     if (yourName.value === '') {
-//         return false;
-//     } else {
-//         return true;
-//     }
-// }
+function check(yourName) {
+    if (yourName.value === '') {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+// /////////////////////////////////////
+//      rotate div elements action
+// //////////////////////////////////////
+
+const animateBtn = document.getElementById('animate-btn');
+const animateBtn2 = document.getElementById('animate-btn2');
+const div1 = document.getElementById('rotate1');
+const div2 = document.getElementById('rotate2');
+const div3 = document.getElementById('rotate3');
+
+animateBtn.addEventListener('click', () => {
+    div1.classList.add('move1');
+    div2.classList.add('move2');
+    div3.classList.add('move3');
+});
+animateBtn2.addEventListener('click', () => {
+    div1.classList.remove('move1');
+    div2.classList.remove('move2');
+    div3.classList.remove('move3');
+});
