@@ -55,10 +55,13 @@ const div3 = document.getElementById('rotate3');
 animateBtn.addEventListener('click', () => {
     div1.classList.add('move1');
     div2.classList.add('move2');
-    div3.classList.add('move3');
+    // div3.classList.add('move3');
+    div3.classList.add('animate');
 });
+
 animateBtn2.addEventListener('click', () => {
     div1.classList.remove('move1');
     div2.classList.remove('move2');
-    div3.classList.remove('move3');
+    // div3.classList.remove('move3');
+    div3.classList.remove('animate');
 });

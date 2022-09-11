@@ -162,9 +162,13 @@ header {
 }
 .animate-button-div:active {
     transform: scale(0.9);
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
     box-shadow: 0 3 15px black;
     color: black;
+}
+
+.animate-button-div:focus {
+    background-color: blueviolet;
 }
 
 #animate-btn1 {
@@ -210,15 +214,43 @@ header {
 }
 
 .move1 {
-    transform: rotate(360deg);
+    transform: skewX(90deg);
+    background-color: darkgreen;
 }
 
 .move2 {
-    transform: rotateX(360deg);
+    transform: rotateX(1440deg);
+    background-color: rgb(104, 104, 104);
+    transition-timing-function: ease-in-out;
 }
 
 .move3 {
     transform: scale(0);
+    background-color: rgb(255, 166, 0);
+    transition-timing-function: ease-in;
+}
+
+.animate {
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    background-color: blueviolet;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    0% {
+        transform: translatex(0) translateY(0x) scale(1);
+    }
+    33% {
+        transform: translateX(300px) translateY(-300px) rotate(180deg) scale(0);
+    }
+    66% {
+        transform: translateX(-300px) translateY(-600px) rotate(-180deg) scale(0.5);
+    }
+    100% {
+        transform: translateX(0) translateY(0px) rotate(360deg) scale(1);
+    }
 }
 
 /* 
