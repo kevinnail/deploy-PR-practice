@@ -173,9 +173,11 @@ header {
 
 #animate-btn1 {
     left: 0px;
+    position: absolute;
 }
 #animate-btn2 {
     left: 630px;
+    position: absolute;
 }
 
 .animate-div-class {
@@ -230,6 +232,7 @@ header {
     transform: scale(0);
     background-color: rgb(255, 166, 0);
     transition-timing-function: ease-out;
+    transition: ;
 }
 
 .animate1 {
@@ -268,7 +271,7 @@ header {
         transform: translateX(150px) translateY(-600px) rotate(180deg) scale(0.8);
     }
     100% {
-        transform: translateX(-1000px) translateY(400px) rotateX(360deg) scale(1);
+        transform: translateX(-2000px) translateY(400px) rotateX(360deg) scale(1);
     }
 }
 @keyframes slide2 {
@@ -276,16 +279,16 @@ header {
         transform: translateX(0) translateY(0x) scale(1);
     }
     20% {
-        transform: translateX(-300px) translateY(100px) rotateY(180deg) scale(0);
+        transform: translateX(-300px) translateY(100px) rotateY(180deg) scale(0) skew(90deg);
     }
     38% {
-        transform: translateX(150px) translateY(-350px) rotate(-180deg) scale(0.5);
+        transform: translateX(150px) translateY(-350px) rotate(-180deg) scale(0.5) skew(180deg);
     }
     83% {
-        transform: translateX(600px) translateY(100px) rotate(180deg) scale(0.3);
+        transform: translateX(600px) translateY(100px) rotate(180deg) scale(0.3) skew(27deg);
     }
     100% {
-        transform: translateX(-800px) translateY(-500px) rotateY(360deg) scale(1);
+        transform: translateX(-2000px) translateY(-500px) rotateY(360deg) scale(1) skew(360deg);
     }
 }
 @keyframes slide3 {

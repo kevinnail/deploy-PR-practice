@@ -59,6 +59,19 @@ animateBtn.addEventListener('click', () => {
     div1.classList.add('animate1');
     div2.classList.add('animate2');
     div3.classList.add('animate3');
+    animateBtn.style.transform = 'scale(0)';
+    animateBtn2.style.transform = 'scale(1)';
+    let i = 100;
+    while (i > 0) {
+        animateBtn.style.top = i + 'px';
+        animateBtn.style.left = i + 'px';
+        i--;
+    }
+    while (i < 431) {
+        animateBtn2.style.top = i + 'px';
+        animateBtn2.style.left = i + 'px';
+        i++;
+    }
 });
 
 animateBtn2.addEventListener('click', () => {
@@ -68,4 +81,20 @@ animateBtn2.addEventListener('click', () => {
     div1.classList.remove('animate1');
     div2.classList.remove('animate2');
     div3.classList.remove('animate3');
+
+    animateBtn.style.transform = 'scale(1)';
+    animateBtn2.style.transform = 'scale(0)';
+
+    let i = 100;
+    while (i > 0) {
+        animateBtn2.style.top = i + 'px';
+        animateBtn2.style.left = i + 'px';
+        i--;
+    }
+
+    while (i < 431) {
+        animateBtn.style.top = i + 'px';
+        animateBtn.style.left = i + 'px';
+        i++;
+    }
 });
