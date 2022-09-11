@@ -214,14 +214,16 @@ header {
 }
 
 .move1 {
-    transform: skewX(90deg);
+    transform: skewX(360deg);
     background-color: darkgreen;
+    transition-duration: 3s;
 }
 
 .move2 {
     transform: rotateX(1440deg);
     background-color: rgb(104, 104, 104);
     transition-timing-function: ease-in-out;
+    transition-duration: 3s;
 }
 
 .move3 {
@@ -243,13 +245,13 @@ header {
         transform: translatex(0) translateY(0x) scale(1);
     }
     33% {
-        transform: translateX(300px) translateY(-300px) rotate(180deg) scale(0);
+        transform: translateX(300px) translateY(-300px) rotateX(180deg) scale(0);
     }
     66% {
         transform: translateX(-300px) translateY(-600px) rotate(-180deg) scale(0.5);
     }
     100% {
-        transform: translateX(0) translateY(0px) rotate(360deg) scale(1);
+        transform: translateX(0) translateY(0px) rotateX(360deg) scale(1);
     }
 }
 
