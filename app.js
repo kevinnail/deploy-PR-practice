@@ -89,6 +89,7 @@ animateBtn2.addEventListener('click', () => {
     while (i > 0) {
         animateBtn2.style.top = i + 'px';
         animateBtn2.style.left = i + 'px';
+
         i--;
     }
 
@@ -97,4 +98,17 @@ animateBtn2.addEventListener('click', () => {
         animateBtn.style.left = i + 'px';
         i++;
     }
+});
+
+// add <li> element to <ul>
+
+const nameList = document.querySelector('.list-exp');
+const nameInput = document.querySelector('.name-input');
+const addListBtn = document.querySelector('.add-list-btn');
+
+addListBtn.addEventListener('click', () => {
+    const newLi = document.createElement('li');
+    const liContent = document.createTextNode(nameInput.value);
+    newLi.append(liContent);
+    nameList.append(newLi);
 });
