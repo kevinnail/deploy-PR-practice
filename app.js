@@ -111,4 +111,19 @@ addListBtn.addEventListener('click', () => {
     const liContent = document.createTextNode(nameInput.value);
     newLi.append(liContent);
     nameList.append(newLi);
+    nameInput.textContent = '';
 });
+
+const userList = document.querySelectorAll('.list-exp li');
+
+// eslint-disable-next-line space-before-function-paren
+for (let user of userList)
+    user.addEventListener('click', function () {
+        this.style.color = 'red';
+        this.style.fontSize = '2em';
+        this.style.backgroundColor = 'black';
+        this.style.color = 'red';
+    });
+console.log(userList.value);
+//  see if you can use an object for the list so that when you
+// create new elements they are subject to the for loop

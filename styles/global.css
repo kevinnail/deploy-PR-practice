@@ -201,11 +201,17 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .rotate-div:hover {
     background-color: aquamarine;
+    color: black;
+}
+
+.rotate-div:active {
+    scale: 0;
+    transform: rotate(720deg);
 }
 
 #rotate1 {
@@ -318,8 +324,31 @@ header {
 
 
  */
+.list-div {
+    background-color: rgb(0, 120, 120);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    margin: 10px 0px;
+    padding: 10px;
+}
 
 .list-exp {
+    display: grid;
+    justify-content: center;
+    gap: 3px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.listDiv li {
+    line-height: 2em;
+    list-style-type: circle;
 }
 
 /* 
